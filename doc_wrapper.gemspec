@@ -5,11 +5,11 @@ require "doc_wrapper/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "doc_wrapper"
+  s.name        = "ds_doc_wrapper"
   s.version     = DocWrapper::VERSION
   s.authors     = ["nardele salomon"]
   s.email       = ["noliveira@telelistas.net"]
-  s.homepage    = "www.telelistas.net"
+  s.homepage    = "http://www.telelistas.net"
   s.summary     = "A doc converter to another doc"
   s.description = "A doc converter to another doc. Doc is a data structure like a hash, array or a simple string"
   s.license     = "MIT"
