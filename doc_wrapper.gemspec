@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = "ds_doc_wrapper"
   s.version     = DocWrapper::VERSION
   s.authors     = ["nardele salomon"]
-  s.email       = ["noliveira@telelistas.net"]
-  s.homepage    = "http://www.telelistas.net"
+  s.email       = ["del.soft.99@gmail.com"]
+  s.homepage    = "https://github.com/telelistas/doc_wrapper"
   s.summary     = "A doc converter to another doc"
   s.description = "A doc converter to another doc. Doc is a data structure like a hash, array or a simple string"
   s.license     = "MIT"
