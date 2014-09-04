@@ -1,3 +1,51 @@
 = DocWrapper
 
 This project rocks and uses MIT-LICENSE.
+
+== Description
+
+Doc wrapper, convert a doc in another doc. Doc is some  ruby data structure, like a Hash, Array or a simple String
+
+The advantage is that the conversion engine is automatically identified, making the code cleaner
+
+
+===== Example
+  
+  :001 > DocWrapper.to_target_doc {origin: :sales, user_id: 1, account_id: 99 }   
+  =>  { user: 'John', account_name: 'xxxx' }
+  
+  another example, only changes de origin key
+    :002 > DocWrapper.to_target_doc {owner: :billing, user_id: 1, account_id: 99 }
+    ==> { user_name: 'john', amount: 100.87 }
+
+== Install
+
+  $ gem install ds_doc_wrapper
+  
+== Usage
+
+First you need define some doc 
+
+  class DocWrapper:DocByTomCat
+    def self.to_target_doc a_doc
+      # --  here put you converter code
+      {
+        tom_cat_name: a_doc['name'],
+        tom_cat_eat: a_doc['food']
+      }
+    end
+  end
+  
+another doc wrapper:
+  
+  class DocWrapper:DocByCook
+    def self.to_target_doc a_doc
+      # --  here put you converter code
+      {
+        name: a_doc['name'],
+        main: a_doc['food']
+      }
+    end
+  end
+  
+  
