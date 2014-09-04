@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ds_doc_wrapper (1.0.1)
+    ds_doc_wrapper (1.0.2)
 
 GEM
   remote: https://rubygems.org/

@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require(*Rails.groups)
-require "doc_wrapper"
+require "ds_doc_wrapper"
 
 module Dummy
   class Application < Rails::Application
