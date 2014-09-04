@@ -11,5 +11,9 @@ gemspec
 # your gem to rubygems.org.
 
 # To use debugger
-gem 'debugger'
+# gem 'debugger'
 #gem 'byebug'
+
+
+gem "rails", "~> 4.1.5"
+gem "sqlite3"
