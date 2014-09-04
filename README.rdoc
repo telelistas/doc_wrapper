@@ -24,7 +24,7 @@ The advantage is that the conversion engine is automatically identified, making 
   
 == Usage
 
-First you need define some doc 
+First you need define some doc wrappers 
 
   class DocWrapper:DocByTomCat
     def self.to_target_doc a_doc
@@ -48,4 +48,12 @@ another doc wrapper:
     end
   end
   
-  
+  them:
+    :003 > DocWrapper::Base.to_target_doc( { owner: 'tom_cat', 'name' => 'Tom', 'food' => 'fish' } )
+    ==> { tom_cat_name: 'Tom', tom_cat_eat: 'fish' }
+    
+    :004 >  DocWrapper::Base.to_target_doc( { owner: 'cook', 'name' => 'Tom', 'food' => 'fish' } )
+    ==> { name: 'Tom', main: 'fish' }
+    
+    
+    
