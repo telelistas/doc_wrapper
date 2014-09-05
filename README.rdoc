@@ -55,5 +55,6 @@ another doc wrapper:
     :004 >  DocWrapper::Base.to_target_doc( { owner: 'cook', 'name' => 'Tom', 'food' => 'fish' } )
     ==> { name: 'Tom', main: 'fish' }
     
-    
+== Change log    
+*  Add default options configurations
     

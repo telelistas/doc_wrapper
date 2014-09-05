@@ -16,10 +16,16 @@ module DocWrapper::Base
 private
 
   def self.klass_name origem, opts={}
+    
+    def_opts = Rails.configuration.doc_wrapper if Rails.configuration.respond_to? 'doc_wrapper'
+    
+    opts = def_opts.merge(opts) if def_opts
+
     modulle = "#{opts[:module].to_s.underscore}::" if opts[:module]
     prefix = "#{opts[:prefix]}_" if opts[:prefix]
     sufix = "_#{opts[:sufix]}" if opts[:sufix]
 
+   
     prefix = "DocBy" unless prefix
     modulle = "DocWrapper::" unless modulle
     
