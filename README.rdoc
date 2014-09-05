@@ -26,7 +26,7 @@ The advantage is that the conversion engine is automatically identified, making 
 
 First you need define some doc wrappers 
 
-  class DocWrapper:DocByTomCat
+  class DocWrapper::DocByTomCat
     def self.to_target_doc a_doc
       # --  here put you converter code
       {
@@ -38,7 +38,7 @@ First you need define some doc wrappers
   
 another doc wrapper:
   
-  class DocWrapper:DocByCook
+  class DocWrapper::DocByCook
     def self.to_target_doc a_doc
       # --  here put you converter code
       {
