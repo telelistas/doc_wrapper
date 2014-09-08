@@ -56,5 +56,6 @@ another doc wrapper:
     ==> { name: 'Tom', main: 'fish' }
     
 == Change log    
-*  Add default options configurations
+*  1.2 -> Add ds_hash dependency
+*  1.1 -> Add default options configurations
     

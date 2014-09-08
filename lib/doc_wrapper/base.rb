@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'ds_hash'
 module DocWrapper::Base
     
   def self.to_target_doc src , opts={}
