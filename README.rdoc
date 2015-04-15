@@ -43,7 +43,7 @@ another doc wrapper:
       # --  here put you converter code
       {
         name: a_doc['name'],
-        main: a_doc['food']
+        main: "#{a_doc['food']} dinner"
       }
     end
   end
@@ -53,7 +53,7 @@ another doc wrapper:
     ==> { tom_cat_name: 'Tom', tom_cat_eat: 'fish' }
     
     :004 >  DocWrapper::Base.to_target_doc( { owner: 'cook', 'name' => 'Tom', 'food' => 'fish' } )
-    ==> { name: 'Tom', main: 'fish' }
+    ==> { name: 'Tom', main: 'fish dinner' }
     
 == Change log    
 *  1.2 -> Add ds_hash dependency
