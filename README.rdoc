@@ -30,8 +30,8 @@ First you need define some doc wrappers
     def self.to_target_doc a_doc
       # --  here put you converter code
       {
-        tom_cat_name: a_doc['name'],
-        tom_cat_eat: a_doc['food']
+        cat_name: a_doc['name'],
+        cat_eat: a_doc['food']
       }
     end
   end
@@ -50,7 +50,7 @@ another doc wrapper:
   
   them:
     :003 > DocWrapper::Base.to_target_doc( { owner: 'tom_cat', 'name' => 'Tom', 'food' => 'fish' } )
-    ==> { tom_cat_name: 'Tom', tom_cat_eat: 'fish' }
+    ==> { cat_name: 'Tom', cat_eat: 'fish' }
     
     :004 >  DocWrapper::Base.to_target_doc( { owner: 'cook', 'name' => 'Tom', 'food' => 'fish' } )
     ==> { name: 'Tom', main: 'fish dinner' }
