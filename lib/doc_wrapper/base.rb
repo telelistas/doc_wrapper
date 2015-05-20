@@ -22,15 +22,21 @@ private
     
     opts = def_opts.merge(opts) if def_opts
 
-    modulle = "#{opts[:module].to_s.underscore}::" if opts[:module]
+    modulle = "#{opts[:module].to_s.underscore}" if opts[:module]
     prefix = "#{opts[:prefix]}_" if opts[:prefix]
     sufix = "_#{opts[:sufix]}" if opts[:sufix]
 
    
-    prefix = "DocBy" unless prefix
-    modulle = "DocWrapper::" unless modulle
+    prefix = "doc_By_" unless prefix
+    modulle = "doc_wrapper" unless modulle
     
-    "#{modulle}#{prefix.camelize}#{origem.camelize}#{sufix}".camelize
+    modulle_arr = origem.split('/')
+    origem = modulle_arr.pop
+
+    modulle_arr.insert(0, modulle)
+    modulle = modulle_arr.join('/') + '/'
+
+    "#{modulle}#{prefix}#{origem}#{sufix}".camelize
   end
 
   def self.infer_doc_origem src, opts
